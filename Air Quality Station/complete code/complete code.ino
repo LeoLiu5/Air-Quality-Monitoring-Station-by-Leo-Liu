@@ -33,7 +33,7 @@ void setup() {
   // Wait for serial monitor to open
   Serial.begin(115200);
   while (!Serial) delay(10);
-Serial.println("SGP30 test");
+  Serial.println("SGP30 test");
 
   if (! sgp.begin()){
     Serial.println("Sensor not found :(");
@@ -43,10 +43,12 @@ Serial.println("SGP30 test");
   Serial.print(sgp.serialnumber[0], HEX);
   Serial.print(sgp.serialnumber[1], HEX);
   Serial.println(sgp.serialnumber[2], HEX);
+  // If you have a baseline measurement from before you can assign it to start, to 'self-calibrate'
+  //sgp.setIAQBaseline(0x8E68, 0x8F41);  // Will vary for each sensor!
   Serial.println("  PMS5003 Air Quality Sensor");
 
-  // Wait one second for sensor to boot up!
-  delay(1000);
+  // Wait 20 seconds for sensor to boot up!
+  delay(20000);
 
   // If using serial, initialize it and set baudrate before starting!
   // Uncomment one of the following
@@ -58,15 +60,16 @@ Serial.println("SGP30 test");
   //if (! aqi.begin_UART(&Serial1)) { // connect to the sensor over hardware serial
   if (! aqi.begin_UART(&pmSerial)) { // connect to the sensor over software serial 
     Serial.println("Could not find PM 2.5 sensor!");
-    while (1) delay(10);
-  }
+    while (1) delay(10);}
 
   Serial.println("PM25 found!");
   dht.begin();
   lcd.init(); 
   // lcd.begin(16,2);//Defining 16 columns and 2 rows of lcd display
-lcd.backlight(); // use to turn on and turn off LCD back light
+  lcd.backlight(); // use to turn on and turn off LCD back light
 }
+
+int counter = 0;
 
 void loop() {
   PM25_AQI_Data data;
@@ -120,6 +123,21 @@ void loop() {
   }
   Serial.print("Raw H2 "); Serial.print(sgp.rawH2); Serial.print(" \t");
   Serial.print("Raw Ethanol "); Serial.print(sgp.rawEthanol); Serial.println("");
+    delay(1000);
+
+  counter++;
+  if (counter == 30) {
+    counter = 0;
+
+    uint16_t TVOC_base, eCO2_base;
+    if (! sgp.getIAQBaseline(&eCO2_base, &TVOC_base)) {
+      Serial.println("Failed to get baseline readings");
+      return;
+    }
+    Serial.print("****Baseline values: eCO2: 0x"); Serial.print(eCO2_base, HEX);
+    Serial.print(" & TVOC: 0x"); Serial.println(TVOC_base, HEX);
+  }
+
     // Converting the sensor readings to string values that the LCD can display
 String pm1String = String(data.pm10_standard);
 String pm25String = String(data.pm25_standard);
@@ -129,13 +147,13 @@ String humString = String(hum);
 String TVOCString = String(sgp.TVOC);
 String eCO2String = String(sgp.eCO2);
 
-
 unsigned long previousMillis = 0;
-unsigned long interval = 5000; //Refreshes the LCD once every 10000ms (10 seconds)
+unsigned long interval = 1000; //Refreshes the LCD once every 10000ms (10 seconds)
 
 unsigned long currentMillis = millis();
 if (currentMillis - previousMillis > interval) {
   previousMillis = currentMillis;
+
   lcd.clear();//Clear the screen
   lcd.setCursor(0,0);
   lcd.print("PM1  PM2.5  PM10");
@@ -144,8 +162,8 @@ if (currentMillis - previousMillis > interval) {
   lcd.setCursor(5,1);
   lcd.print(pm25String);
   lcd.setCursor(12,1);
-  lcd.print(pm100String);
-  delay(5000);
+  lcd.print(pm100String); delay(10000);
+
   lcd.clear();//Clear the screen
   lcd.setCursor(0, 0);
   lcd.print("Temp:");
@@ -155,17 +173,16 @@ if (currentMillis - previousMillis > interval) {
   lcd.setCursor(0, 1);
   lcd.print("Humidity:");
   lcd.setCursor(10, 1);
-  lcd.print(humString);lcd.setCursor(15, 1);lcd.print("%");delay(5000);
+  lcd.print(humString);lcd.setCursor(15, 1);lcd.print("%");delay(10000);
+
   lcd.clear();//Clear the screen
   lcd.setCursor(0, 0);
   lcd.print("TVOC:");
   lcd.setCursor(6, 0);
   lcd.print(TVOCString);lcd.setCursor(13, 0);lcd.print("ppb");
-
-
   lcd.setCursor(0, 1);
   lcd.print("eco2:");
   lcd.setCursor(6, 1);
-  lcd.print(eCO2String);lcd.setCursor(13, 1);lcd.print("ppm");delay(5000);
+  lcd.print(eCO2String);lcd.setCursor(13, 1);lcd.print("ppm");delay(10000);
   }
 }

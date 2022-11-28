@@ -26,8 +26,8 @@
 
 
 > ## Project Objective 
-> <br> The purpose of this project is to provide a worked-out example of how to build an air quality monitoring system. The initial deployment of my air quality monitoring station will be in the Connected Environments Lab. I will use Rasberry Pi to share my live data on the CASA MQTT server, then use Influx DB and Grafana to graph the data. I will also try to deploy my air quality monitoring station in the other rooms of this building to compare results.
- Since One Pool Street is a new building, it will be interesting to find out if its TVOC level is in the acceptable range or not. Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs), such as temporarily increasing the ventilation rate or the fresh air change rate, to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.     
+> <br> The purpose of this project is to provide a worked-out example of how to build an air quality monitoring system. The initial deployment of my air quality monitoring station will be in the Connected Environments Lab. I will use Raspberry Pi to share my live data on the CASA MQTT server, then use Influx DB and Grafana to graph the data. I will also try to deploy my air quality monitoring station in the other rooms of this building to compare results.
+ Since One Pool Street is a new building and is the first building of the new project UCL East campus, it would be interesting to find out if its TVOC level is in the acceptable range or not. Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs), such as temporarily increasing the ventilation rate or the fresh air change rate, to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.     
 
 > <br>
 
