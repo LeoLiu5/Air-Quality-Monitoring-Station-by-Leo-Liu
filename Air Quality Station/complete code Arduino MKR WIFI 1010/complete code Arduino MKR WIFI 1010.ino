@@ -1,33 +1,30 @@
-/* Test sketch for  PM2.5 sensor */
+/* Test sketch for sensors */
 //Libraries
-#include <DHT.h>;
 #include "Adafruit_PM25AQI.h"
 #include "Adafruit_SGP30.h"
+#include <DHT.h>;
 #include <LiquidCrystal_I2C.h>
-#include <SoftwareSerial.h>
-#include <Wire.h>
-// we must use software serial...
-SoftwareSerial pmSerial(4, 2);
-Adafruit_SGP30 sgp;
-Adafruit_PM25AQI aqi = Adafruit_PM25AQI();
-//Constants
-#define DHTPIN 7     // what pin we're connected to
+// #include "PMS.h"              // https://github.com/fu-hsi/pms
+// comment these two lines if using hardware serial
+// #include <SoftwareSerial.h>
+// SoftwareSerial pmSerial(2, 3);
+// #include <Wire.h>
+// PMS pms(Serial1);
+
+Adafruit_PM25AQI aqi = Adafruit_PM25AQI(); //Setting up PMS5003 data
+Adafruit_SGP30 sgp; //Setting up SGP30 data
+
+#define DHTPIN 3     // what pin we're connected to
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
 DHT dht(DHTPIN, DHTTYPE); //// Initialize DHT sensor for normal 16mhz Arduino
+//Constants
+float hum;  //Stores humidity value
+float temp; //Stores temperature value
 
 int totalColumns = 16;
 int totalRows = 2;
-
-LiquidCrystal_I2C lcd(0x27, totalColumns, totalRows);
 //I2C pins declaration for 1602A with I2C module
-// LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3);
-
-//without holding up the Arduino processor like delay() does. If you use a delay(),
-//the PMS5003 will produce checksum errors
-//Variables
-int chk;
-float hum;  //Stores humidity value
-float temp; //Stores temperature value
+LiquidCrystal_I2C lcd(0x27, totalColumns, totalRows); 
 
 void setup() {
   // Wait for serial monitor to open
@@ -44,21 +41,20 @@ void setup() {
   Serial.print(sgp.serialnumber[1], HEX);
   Serial.println(sgp.serialnumber[2], HEX);
   // If you have a baseline measurement from before you can assign it to start, to 'self-calibrate'
-  //sgp.setIAQBaseline(0x8E68, 0x8F41);  // Will vary for each sensor!
-  Serial.println("  PMS5003 Air Quality Sensor");
+  sgp.setIAQBaseline(0x8E68, 0x8F41);  // Will vary for each sensor!
+  Serial.println(" PMS5003 Air Quality Sensor");
 
   // Wait 20 seconds for sensor to boot up!
   delay(20000);
 
   // If using serial, initialize it and set baudrate before starting!
   // Uncomment one of the following
-  //Serial1.begin(9600);
-  pmSerial.begin(9600);
-
+  Serial1.begin(9600);
+  // pmSerial.begin(9600);
   // There are 3 options for connectivity!
   // if (! aqi.begin_I2C()) {      // connect to the sensor over I2C
-  //if (! aqi.begin_UART(&Serial1)) { // connect to the sensor over hardware serial
-  if (! aqi.begin_UART(&pmSerial)) { // connect to the sensor over software serial 
+  if (! aqi.begin_UART(&Serial1)) { // connect to the sensor over hardware serial
+  // if (! aqi.begin_UART(&pmSerial)) { // connect to the sensor over software serial 
     Serial.println("Could not find PM 2.5 sensor!");
     while (1) delay(10);}
 
@@ -72,17 +68,16 @@ void setup() {
 int counter = 0;
 
 void loop() {
+  // PMS::DATA data;
   PM25_AQI_Data data;
-  
   if (! aqi.read(&data)) {
     Serial.println("Could not read from AQI");
     delay(1000);  // try again in a bit!
     return;
   }
+  
   Serial.println("AQI reading success");
 
-  Serial.println();
-  Serial.println(F("---------------------------------------"));
   Serial.println(F("Concentration Units (standard)"));
   Serial.println(F("---------------------------------------"));
   Serial.print(F("PM 1.0: ")); Serial.print(data.pm10_standard);
@@ -100,6 +95,7 @@ void loop() {
   Serial.print(F("Particles > 2.5um / 0.1L air:")); Serial.println(data.particles_25um);
   Serial.print(F("Particles > 5.0um / 0.1L air:")); Serial.println(data.particles_50um);
   Serial.print(F("Particles > 10 um / 0.1L air:")); Serial.println(data.particles_100um);
+  Serial.println(F("---------------------------------------"));
   Serial.println(F("---------------------------------------"));
       //Read data and store it to variables hum and temp
     hum = dht.readHumidity();
@@ -139,16 +135,16 @@ void loop() {
   }
 
     // Converting the sensor readings to string values that the LCD can display
-String pm1String = String(data.pm10_standard);
-String pm25String = String(data.pm25_standard);
-String pm100String = String(data.pm100_standard);
+String pm1String = String(data.pm10_env);
+String pm25String = String(data.pm25_env);
+String pm100String = String(data.pm100_env);
 String tempString = String(temp);
 String humString = String(hum);
 String TVOCString = String(sgp.TVOC);
 String eCO2String = String(sgp.eCO2);
 
 unsigned long previousMillis = 0;
-unsigned long interval = 1000; //Refreshes the LCD once every 10000ms (10 seconds)
+unsigned long interval = 1000; //Refreshes the LCD once every 1000ms (1 seconds)
 
 unsigned long currentMillis = millis();
 if (currentMillis - previousMillis > interval) {

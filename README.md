@@ -2,7 +2,10 @@
 
 
 
-
+> ## Project Objective 
+> <br> The purpose of this project is to provide a worked-out example of how to build an indoor air quality monitoring system. The initial deployment will be in the Connected Environments Lab in One Pool Street. It would be worthwhile to examine the air quality in the lab, since CE staff and students are having regular meetings in this newly furnished room.
+Total volatile organic compounds (TVOC) include pollutants from static sources and variable sources (Holøs et al., 2018). Construction materials, fittings, equipment and surface treatments belong to static sources. Residents or resident-related activities such as using cleaning compounds or bringing in new objects are variable sources. Both sources have highest impacts at the start of a building’s service life, therefore, the concentration of TVOC in a newly furnished building follows a multi-exponential decay trend over time after the construction is complete (Holøs et al., 2018). 
+><br>
 
 
 
@@ -11,41 +14,57 @@
 
 <img src="./img/brainstorm.jpeg"  width="50%" height="50%">
 
-- ### [An Arduino Uno R3](https://shop.pimoroni.com/products/arduino-uno-rev3?variant=3092610678794), which is used as the microcontroller board for this project and can be connected through Wi-Fi communication.
+- ### [Arduino MKR WiFi 1010](https://thepihut.com/products/arduino-mkr-wifi-1011?variant=32106770464830&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAiAp7GcBhA0EiwA9U0mtrhYRhqejY5YdluLdDMJ-_NmuugGVmjQox3zMxMjW3hzbZ6OASWcKxoCYxIQAvD_BwE), which is used as the microcontroller board for this project and can be connected through Wi-Fi communication.
+
+<img src="./img/h1.jpeg"  width="50%" height="50%">
+
 - ### [A PMS5003 particulate matter sensor with cable](https://coolcomponents.co.uk/products/pm2-5-air-quality-sensor-and-breadboard-adapter-kit-pms5003), which senses particulates of various sizes (PM1, PM2.5, PM10) from sources like smoke, dust, pollen, metal and organic particles.
-- ### [An I2C 16x2 Arduino-compatible LCD Display](https://thepihut.com/products/i2c-16x2-arduino-lcd-display-module?variant=27740631761&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQiAj4ecBhD3ARIsAM4Q_jEPRQ0tJKdw66-0kLN20LmP5OWzxONd0NJJs3dVoUGy7qriAn9igzgaAnyfEALw_wcB), which is used to display the live data.
+
+<img src="./img/h2.jpeg"  width="50%" height="50%">
+
+- ### [An I2C 16x2 Arduino-compatible LCD Display](https://thepihut.com/products/i2c-16x2-arduino-lcd-display-module?variant=27740631761&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQiAj4ecBhD3ARIsAM4Q_jEPRQ0tJKdw66-0kLN20LmP5OWzxONd0NJJs3dVoUGy7qriAn9igzgaAnyfEALw_wcB), which is used to display the live data. The I2C 16x2 Arduino-compatible LCD screen is ideal for displaying text, numbers, and special characters of the live data 
+
+<img src="./img/h3.jpeg"  width="50%" height="50%">
+
 - ### [A DHT22 temperature/humidity sensor](https://thepihut.com/products/dht22-temperature-humidity-sensor-extras?variant=27740418129&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwtp2bBhAGEiwAOZZTuF0XQfJresicn_DwyArRHfgDXQoU8I8vx1WCKW8TAyW2_viN2bb0choC5kcQAvD_BwE), which returns temperature and humidity readings.
 
-- ### [An Adafruit SGP30 TVOC/eCO2 Gas Sensor](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor), which detects a wide range of Volatile Organic Compounds (VOCs) and H2 for indoor air quality monitoring. This sensor calculates TVOC and its equivalent carbon dioxide (eCO2) values. TVOC (total volatile organic compounds) represents the entire pool of pollutants from static and variable sources (Holøs et al., 2018). Construction materials, fittings, equipment and surface treatments belong to the static. Residents or resident-related activities such as using cleaning compounds or bringing in new objects are variable sources. Both sources have the highest impacts at the start of a building’s service life. Therefore, the concentration of TVOC in a newly furnished building follows a multi-exponential decay trend over time after the construction is complete (Holøs et al., 2018). 
+<img src="./img/h4.jpeg"  width="50%" height="50%">
+
+- ### [An Adafruit SGP30 TVOC/eCO2 Gas Sensor](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor), which calculates TVOC and its equivalent carbon dioxide (eCO2) values. This sensor detects a wide range of Volatile Organic Compounds (VOCs) and H2 for indoor air quality monitoring.
+
+<img src="./img/h5.jpeg"  width="50%" height="50%">
 
 
 
-- ### [A Raspberry Pi](https://thepihut.com/products/raspberry-pi-4-model-b), which can be used as a data store and upload the data to the CASA MQTT server. 
-<img src="./img/Rpie.jpeg"  width="50%" height="50%" class="center">
-<br>
+## - Components Assemblage
+
+- The hardware components are connected to Arduino MKR through jumping wires.
+
+<img src="./img/a1.jpeg"  width="50%" height="50%">
+
+- Wago lever connectors.
+
+<img src="./img/a0.jpeg"  width="50%" height="50%">
+
+- A copper stripboard is used to create more pins and organize the wires.
+- Each row on the copper stripboard is designed for a specific pin.
+
+<img src="./img/a2.jpeg"  width="50%" height="50%">
+
+- A serial data communication employing I2C (Inter-Integrated Circuit) master/slave bus controller is implemented for SGP30 and the I2C LCD. 
+- Unlike traditional data transfer bus systems (USB, SPI, Microwire, and UARTS), I2C requires only two wires (SDA and SCL) to transmit information between devices connected to the bus (Kaneriya & Jagtap, 2015).
+
+<img src="./img/a5.jpeg"  width="50%" height="50%">
 
 
-> ## Project Objective 
-> <br> The purpose of this project is to provide a worked-out example of how to build an air quality monitoring system. The initial deployment of my air quality monitoring station will be in the Connected Environments Lab. I will use Raspberry Pi to share my live data on the CASA MQTT server, then use Influx DB and Grafana to graph the data. I will also try to deploy my air quality monitoring station in the other rooms of this building to compare results.
- Since One Pool Street is a new building and is the first building of the new project UCL East campus, it would be interesting to find out if its TVOC level is in the acceptable range or not. Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs), such as temporarily increasing the ventilation rate or the fresh air change rate, to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.     
-
-> <br>
-
-# - Next Steps...
-1. Set up Rasberry Pi and connect to MQTT.
-2. Focus on interior and exterior design (e.g. circuit wiring, packaging, enclosures etc) to make the quality of the build more sophisticated.
-
-<img src="./img/enclosure.png"  width="50%" height="50%" class="center">
+<img src="./img/a4.jpeg"  width="50%" height="50%">
 
 
-<img src="./img/enclosure2.png" width="50%" height="50%" class="center">
-
-
-3. Consider the possibility of outdoor deployment: power (battery, solar power, or cable), waterproof, LoRa?
-
-
+Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs), such as temporarily increasing the ventilation rate or the fresh air change rate, to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.
 
 ## - References
 ><br>
 - Holøs, S.B. et al. (2018) “VOC emission rates in newly built and renovated buildings, and the influence of ventilation – a review and meta-analysis,” International Journal of Ventilation, 18(3), pp. 153–166. Available at: https://doi.org/10.1080/14733315.2018.1435026. 
+
+- Kaneriya, H. and Jagtap, S. (2015) “Design Of I2C Master With Multiple Slave”, International Journal on Recent and Innovation Trends in Computing and Communication, 3(5), pp. 2890–2893. Available at: https://doi.org/10.17762/ijritcc.v3i5.4356.
 ><br>
