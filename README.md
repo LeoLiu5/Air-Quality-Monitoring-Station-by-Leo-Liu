@@ -20,7 +20,11 @@
 
 <img src="./img/h1.jpeg"  width="50%" height="50%">
 
+Above the bottom of the enclosure, a thin layer is produced for sliding in the plastic protector and to prevent wambliness.
+
 <img src="./img/p0.jpeg"  width="50%" height="50%">
+
+<img src="./img/a3.jpeg"  width="50%" height="50%">
 
 - ### [A DHT22 temperature/humidity sensor](https://thepihut.com/products/dht22-temperature-humidity-sensor-extras?variant=27740418129&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwtp2bBhAGEiwAOZZTuF0XQfJresicn_DwyArRHfgDXQoU8I8vx1WCKW8TAyW2_viN2bb0choC5kcQAvD_BwE), which returns temperature and humidity readings.
 
@@ -34,10 +38,10 @@
 
 
 
-- ### [An Adafruit SGP30 TVOC/eCO2 Gas Sensor](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor), is used to calculate TVOC and its equivalent carbon dioxide (eCO2) values. This sensor detects a wide range of Volatile Organic Compounds (VOCs) and H2 for indoor air quality monitoring.
-> <br> Total volatile organic compounds (TVOC) include pollutants from static sources and variable sources (Holøs et al., 2018). Construction materials, fittings, equipment and surface treatments belong to static sources. Residents or resident-related activities such as using cleaning compounds or bringing in new objects are variable sources. Both sources have highest impacts at the start of a building’s service life, therefore, the concentration of TVOC in a newly furnished building follows a multi-exponential decay trend over time after the construction is complete (Holøs et al., 2018). 
+- ### [An Adafruit SGP30 TVOC/eCO2 Gas Sensor](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor), is used to calculate total volatile organic compounds (TVOC) and its equivalent carbon dioxide (eCO2) values. This sensor detects a wide range of Volatile Organic Compounds (VOCs) and H2 for indoor air quality monitoring.
+> <br> TVOC include pollutants from static sources and variable sources (Holøs et al., 2018). Construction materials, fittings, equipment and surface treatments belong to static sources. Residents or resident-related activities such as using cleaning compounds or bringing in new objects are variable sources. Both sources have highest impacts at the start of a building’s service life, therefore, the concentration of TVOC in a newly furnished building follows a multi-exponential decay trend over time after the construction is complete (Holøs et al., 2018). 
 
-<img src="./img/h5.jpeg"  width="50%" height="50%">
+<img src="./img/h5.jpeg"  width="30%" height="30%">
 
 <img src="./img/p2.jpeg"  width="50%" height="50%">
 
@@ -53,16 +57,18 @@
 
 - The hardware components are connected to Arduino MKR through jumping wires.
 
-<img src="./img/a1.png"  width="50%" height="50%">
+
 
 - Wago lever connectors.
 
-<img src="./img/a0.jpeg"  width="50%" height="50%">
+<img src="./img/a0.jpeg"  width="80%" height="80%">
 
 - A copper stripboard is used to create more pins and organize the wires.
 - Each row on the copper stripboard is designed for a specific pin.
 
 <img src="./img/a2.png"  width="50%" height="50%">
+
+<img src="./img/a1.png"  width="70%" height="70%">
 
 - A serial data communication employing I2C (Inter-Integrated Circuit) master/slave bus controller is implemented for SGP30 and the I2C LCD. 
 - Unlike traditional data transfer bus systems (USB, SPI, Microwire, and UARTS), I2C requires only two wires (SDA and SCL) to transmit information between devices connected to the bus (Kaneriya & Jagtap, 2015).
@@ -70,8 +76,8 @@
 <img src="./img/a5.png"  width="50%" height="50%">
 
 
-<img src="./img/a4.png"  width="100%" height="100%">
-
+<img src="./img/a4.png"  width="80%" height="80%">
+<img src="./img/a3copy.jpeg"  width="80%" height="80%">
 
 Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs), such as temporarily increasing the ventilation rate or the fresh air change rate, to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.
 
