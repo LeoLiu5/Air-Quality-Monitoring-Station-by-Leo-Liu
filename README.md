@@ -3,7 +3,7 @@
 
 
 > ## Project Objective 
-> <br> The purpose of this project is to provide a worked-out example of how to build an indoor air quality monitoring system (temperature, humidity, pm2.5, TVOC, and its equivalent carbon dioxide (eCO2) values). The initial deployment will be in the Connected Environments Lab in One Pool Street. It would be worthwhile to examine the air quality in the lab, since CE staff and students are having regular meetings in this newly furnished room.
+> <br> The purpose of this project is to provide a worked-out example of how to build an indoor air quality monitoring system (temperature, humidity, pm2.5, TVOC, and its equivalent carbon dioxide (eCO2) values). The initial deployment will be in the Connected Environments Lab in One Pool Street. It would be worthwhile to examine the air quality in the lab since CE staff and students are having regular meetings in this newly furnished room.
 
 ><br>
 
@@ -20,7 +20,7 @@
 
 <img src="./img/h1.jpeg"  width="50%" height="50%">
 
-Above the bottom of the enclosure, a thin layer is produced for sliding in the plastic protector and to prevent wambliness.
+Above the bottom of the enclosure, a thin layer is produced for sliding in the plastic protector and to prevent wobbliness.
 
 <img src="./img/p0.jpeg"  width="50%" height="50%">
 
@@ -39,7 +39,7 @@ Above the bottom of the enclosure, a thin layer is produced for sliding in the p
 
 
 - ### [An Adafruit SGP30 TVOC/eCO2 Gas Sensor](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor), is used to calculate total volatile organic compounds (TVOC) and its equivalent carbon dioxide (eCO2) values. This sensor detects a wide range of Volatile Organic Compounds (VOCs) and H2 for indoor air quality monitoring.
-> <br> TVOC include pollutants from static sources and variable sources (Holøs et al., 2018). Construction materials, fittings, equipment and surface treatments belong to static sources. Residents or resident-related activities such as using cleaning compounds or bringing in new objects are variable sources. Both sources have highest impacts at the start of a building’s service life, therefore, the concentration of TVOC in a newly furnished building follows a multi-exponential decay trend over time after the construction is complete (Holøs et al., 2018). 
+> <br> TVOC includes pollutants from static sources and variable sources (Holøs et al., 2018). Construction materials, fittings, equipment and surface treatments belong to static sources. Residents or resident-related activities such as using cleaning compounds or bringing in new objects are variable sources. Both sources have the highest impacts at the start of a building’s service life, therefore, the concentration of TVOC in a newly furnished building follows a multi-exponential decay trend over time after the construction is complete (Holøs et al., 2018). 
 
 <img src="./img/h5.jpeg"  width="30%" height="30%">
 
@@ -70,7 +70,7 @@ Above the bottom of the enclosure, a thin layer is produced for sliding in the p
 
 <img src="./img/a1.png"  width="70%" height="70%">
 
-- A serial data communication employing I2C (Inter-Integrated Circuit) master/slave bus controller is implemented for SGP30 and the I2C LCD. 
+- A serial data communication employing an I2C (Inter-Integrated Circuit) master/slave bus controller is implemented for SGP30 and the I2C LCD. 
 - Unlike traditional data transfer bus systems (USB, SPI, Microwire, and UARTS), I2C requires only two wires (SDA and SCL) to transmit information between devices connected to the bus (Kaneriya & Jagtap, 2015).
 
 <img src="./img/a5.png"  width="50%" height="50%">
