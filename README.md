@@ -38,8 +38,8 @@
 
 
 
-- ### [An Adafruit SGP30 TVOC/eCO2 Gas Sensor](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor), is used to calculate total volatile organic compounds (TVOC) and its equivalent carbon dioxide (eCO2) values. This sensor detects a wide range of Volatile Organic Compounds (VOCs) and H2 for indoor air quality monitoring.
-> <br> TVOC includes pollutants from static sources and variable sources (Holøs et al., 2018). Construction materials, fittings, equipment and surface treatments belong to static sources. Residents or resident-related activities such as using cleaning compounds or bringing in new objects are variable sources. Both sources have the highest impacts at the start of a building’s service life, therefore, the concentration of TVOC in a newly furnished building follows a multi-exponential decay trend over time after the construction is complete (Holøs et al., 2018). 
+- ### [An Adafruit SGP30 TVOC/eCO2 Gas Sensor](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor), is used to calculate total volatile organic compounds (TVOC) and its equivalent carbon dioxide (eCO2) values. This sensor detects Volatile Organic Compounds (VOCs) and H2 for indoor air quality monitoring.
+> <br> TVOC includes pollutants from static sources and variable sources (Holøs et al., 2018). Construction materials, fittings, equipment and surface treatments belong to static sources. Residents or resident-related activities such as using cleaning compounds or bringing in new objects are variable sources. Both sources have the highest impacts at the start of a building’s service life. Therefore, the concentration of TVOC in a newly furnished building follows a multi-exponential decay trend over time after the construction is complete (Holøs et al., 2018). 
 
 <img src="./img/h5.jpeg"  width="30%" height="30%">
 
@@ -80,7 +80,7 @@
 
 <img src="./img/r3.jpeg"  width="80%" height="80%">
 
-The plastic protector from the previous plant monitor assessment is used to protect and hold the board.
+- The plastic protector from the previous plant monitor assessment is used to protect and hold the board.
 
 <img src="./img/plasticp.png"  width="30%" height="30%">
 
@@ -91,23 +91,23 @@ The plastic protector from the previous plant monitor assessment is used to prot
 
 <img src="./img/a4.png"  width="80%" height="80%">
 
-<img src="./img/c1.png"  width="80%" height="80%">
+<img src="./img/c1.jpeg"  width="80%" height="80%">
 
-<img src="./img/c2.png"  width="80%" height="80%">
+<img src="./img/c2.jpeg"  width="80%" height="80%">
 
-1 cm above the bottom of the enclosure, a thin broken layer is produced for sliding in the plastic protector and the copper stripe board, to fix their positions and prevent wobbliness. 
+- 1 cm above the bottom of the enclosure, a thin broken layer is produced for sliding in the plastic protector and the stripe board, to fix their positions and prevent wobbliness. 
+
+<img src="./img/insideright.jpeg"  width="70%" height="70%">
+
+<img src="./img/r2.jpeg"  width="70%" height="70%">
+
+<img src="./img/r1.jpeg"  width="70%" height="70%">
 
 
-
-<img src="./img/r2.jpeg"  width="50%" height="50%">
-
-<img src="./img/r1.jpeg"  width="50%" height="50%">
-
-<img src="./img/insideright.jpeg"  width="50%" height="50%">
 
 <img src="./img/rightside.jpeg"  width="40%" height="40%">
 
-Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs), such as temporarily increasing the ventilation rate or the fresh air change rate, to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.
+Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs). Such as temporarily increasing the ventilation rate or the fresh air change rate to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.
 
 ## - References
 ><br>
