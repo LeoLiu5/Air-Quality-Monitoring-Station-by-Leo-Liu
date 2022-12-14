@@ -84,7 +84,7 @@
 
 - The plastic protector from the previous plant monitor assessment is used to protect and hold the board.
 
-<img src="./img/plasticp.png"  width="30%" height="30%">
+<img src="./img/plasticp.png"  width="50%" height="50%">
 
 
 - Choose and deploy suitable enclosures --> 3D Printed Enclosure
