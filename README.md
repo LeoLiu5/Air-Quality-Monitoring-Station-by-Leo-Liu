@@ -31,7 +31,7 @@
 
 <img src="./img/h4.jpeg"  width="40%" height="40%">
 
-<img src="./img/rightside.jpeg"  width="40%" height="40%">
+
 
 
 
@@ -43,7 +43,7 @@
 
 <img src="./img/h5.jpeg"  width="30%" height="30%">
 
-<img src="./img/p2.jpeg"  width="50%" height="50%">
+
 
 - ### [An I2C 16x2 LCD Display](https://thepihut.com/products/i2c-16x2-arduino-lcd-display-module?variant=27740631761&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQiAj4ecBhD3ARIsAM4Q_jEPRQ0tJKdw66-0kLN20LmP5OWzxONd0NJJs3dVoUGy7qriAn9igzgaAnyfEALw_wcB) is used to display the live sensor data locally as an integral part of the system. The Arduino-compatible LCD screen is ideal for displaying text, numbers, and special characters of the live data. 
 
@@ -81,24 +81,31 @@
 <img src="./img/r3.jpeg"  width="80%" height="80%">
 
 The plastic protector from the previous plant monitor assessment is used to protect and hold the board.
-<img src="./img/plasticp.png"  width="50%" height="50%">
+
+<img src="./img/plasticp.png"  width="30%" height="30%">
 
 
-- 3D Printed Enclosure
+- Choose and deploy suitable enclosures --> 3D Printed Enclosure
 - Holes --> Air Flow
+- Screws --> Maintenance issues 
 
 <img src="./img/a4.png"  width="80%" height="80%">
 
-1 cm above the bottom of the enclosure, a thin broken layer is produced for fixing the plastic protector and the copper stripe board, to prevent wobbliness. 
+<img src="./img/c1.png"  width="80%" height="80%">
 
-<img src="./img/insideright.jpeg"  width="50%" height="50%">
+<img src="./img/c2.png"  width="80%" height="80%">
+
+1 cm above the bottom of the enclosure, a thin broken layer is produced for sliding in the plastic protector and the copper stripe board, to fix their positions and prevent wobbliness. 
+
+
 
 <img src="./img/r2.jpeg"  width="50%" height="50%">
 
 <img src="./img/r1.jpeg"  width="50%" height="50%">
 
+<img src="./img/insideright.jpeg"  width="50%" height="50%">
 
-
+<img src="./img/rightside.jpeg"  width="40%" height="40%">
 
 Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs), such as temporarily increasing the ventilation rate or the fresh air change rate, to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.
 
