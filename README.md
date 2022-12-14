@@ -125,6 +125,10 @@ Flushing as much fresh air through the building as possible is the best way to c
 
 ## - References
 ><br>
+- Ada, L. (no date) Adafruit SGP30 TVOC/Eco2 Gas Sensor, Adafruit Learning System. Available at: https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor/arduino-code (Accessed: December 14, 2022). 
+
+- Ada, L. (no date) PM2.5 Air Quality Sensor, Adafruit Learning System. Available at: https://learn.adafruit.com/pm25-air-quality-sensor?view=all (Accessed: December 14, 2022). 
+
 - Holøs, S.B. et al. (2018) “VOC emission rates in newly built and renovated buildings, and the influence of ventilation – a review and meta-analysis,” International Journal of Ventilation, 18(3), pp. 153–166. Available at: https://doi.org/10.1080/14733315.2018.1435026. 
 
 - Kaneriya, H. and Jagtap, S. (2015) “Design Of I2C Master With Multiple Slave”, International Journal on Recent and Innovation Trends in Computing and Communication, 3(5), pp. 2890–2893. Available at: https://doi.org/10.17762/ijritcc.v3i5.4356.
