@@ -71,6 +71,10 @@
 
 <img src="./img/a0.jpeg"  width="90%" height="90%">
 
+Interior design:
+- Compactness and tidiness
+- Clearness and simplicity 
+
 - Wago Lever Connectors ---> A Copper Stripboard 
 - Each row on the copper stripboard is designed for a specific pin.
 
