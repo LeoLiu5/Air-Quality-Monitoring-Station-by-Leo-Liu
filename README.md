@@ -12,7 +12,7 @@
 
 ## - Main Hardware Components
 
-<img src="./img/brainstorm.jpeg"  width="50%" height="50%">
+
 
 
 
@@ -20,16 +20,6 @@
 
 <img src="./img/h1.jpeg"  width="50%" height="50%">
 
-The plastic protector from the previous plant monitor assessment is used to protect and hold the board.
-<img src="./img/plasticp.png"  width="50%" height="50%">
-
-Inside of the enclosure, 1 cm above the bottom, a thin broken layer is produced for fixing the plastic protector and to prevent wobbliness. 
-
-<img src="./img/insideright.jpeg"  width="50%" height="50%">
-
-<img src="./img/p0.jpeg"  width="50%" height="50%">
-
-<img src="./img/a3.jpeg"  width="50%" height="50%">
 
 
 - ### [A PMS5003 particulate matter sensor with cable](https://coolcomponents.co.uk/products/pm2-5-air-quality-sensor-and-breadboard-adapter-kit-pms5003) is used to sense particulates of various sizes (PM1, PM2.5, PM10) from sources like smoke, dust, pollen, metal and organic particles.
@@ -65,18 +55,12 @@ Inside of the enclosure, 1 cm above the bottom, a thin broken layer is produced 
 
 ## - Components Assemblage
 
+<img src="./img/brainstorm.jpeg"  width="50%" height="50%">
+
 - The hardware components are connected to Arduino MKR through jumping wires.
 
 
-
-- Wago lever connectors.
-
 <img src="./img/a0.jpeg"  width="80%" height="80%">
-
-- A copper stripboard is used to create more pins and organize the wires.
-- Each row on the copper stripboard is designed for a specific pin.
-
-<img src="./img/a2.png"  width="50%" height="50%">
 
 <img src="./img/a1.png"  width="70%" height="70%">
 
@@ -85,9 +69,36 @@ Inside of the enclosure, 1 cm above the bottom, a thin broken layer is produced 
 
 <img src="./img/a5.png"  width="50%" height="50%">
 
+- Wago Lever Connectors ---> A Copper Stripboard 
+- Each row on the copper stripboard is designed for a specific pin.
+
+
+<img src="./img/a2.png"  width="50%" height="50%">
+
+- Jumping Wires --> Heat-Shrink Tubing
+- To organize the wires and make everything tidy.
+
+<img src="./img/r3.jpeg"  width="80%" height="80%">
+
+The plastic protector from the previous plant monitor assessment is used to protect and hold the board.
+<img src="./img/plasticp.png"  width="50%" height="50%">
+
+
+- 3D Printed Enclosure
+- Holes --> Air Flow
 
 <img src="./img/a4.png"  width="80%" height="80%">
-<img src="./img/a3copy.jpeg"  width="80%" height="80%">
+
+1 cm above the bottom of the enclosure, a thin broken layer is produced for fixing the plastic protector and the copper stripe board, to prevent wobbliness. 
+
+<img src="./img/insideright.jpeg"  width="50%" height="50%">
+
+<img src="./img/r2.jpeg"  width="50%" height="50%">
+
+<img src="./img/r1.jpeg"  width="50%" height="50%">
+
+
+
 
 Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs), such as temporarily increasing the ventilation rate or the fresh air change rate, to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.
 
