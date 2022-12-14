@@ -53,7 +53,7 @@
 
 
 
-## - Components Assemblage
+## - First Prototype: Components Assemblage 
 
 <img src="./img/brainstorm.jpeg"  width="70%" height="70%">
 
@@ -86,16 +86,24 @@
 
 <img src="./img/plasticp.png"  width="50%" height="50%">
 
-
+## - Second Prototype: deploy the device as it stands
 - Choose and deploy suitable enclosures --> 3D Printed Enclosure
+
+Exterior design:
 - Holes --> Air Flow
 - Screws --> Maintenance issues 
+
+
 
 <img src="./img/a4.png"  width="100%" height="80%">
 
 <img src="./img/c1.jpeg"  width="70%" height="80%">
 
 <img src="./img/c2.jpeg"  width="70%" height="80%">
+
+Interior design:
+- Compactness and tidiness
+- Clearness and simplicity 
 
 - 1 cm above the bottom of the enclosure, a thin broken layer is produced for sliding in the plastic protector and the stripe board, to fix their positions and prevent wobbliness. 
 
