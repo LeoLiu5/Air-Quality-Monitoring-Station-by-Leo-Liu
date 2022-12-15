@@ -121,6 +121,11 @@ Interior design:
 
 <img src="./img/rightside.jpeg"  width="40%" height="40%">
 
+<img src="./img/IMG_0616.jpeg"  width="70%" height="70%">
+
+<img src="./img/IMG_0620.jpeg"  width="70%" height="70%">
+
+
 Flushing as much fresh air through the building as possible is the best way to clear out toxic Volatile Organic Compounds (VOCs). Such as temporarily increasing the ventilation rate or the fresh air change rate to counter the high pollutant-load from off-gassing of volatile compounds from new materials in the building.
 
 ## - References
