@@ -97,7 +97,7 @@ Exterior design:
 - Holes --> Air Flow
 - Screws --> Maintenance issues 
 
-
+<img src="./img/3d.png"  width="100%" height="80%">
 
 <img src="./img/a4.png"  width="100%" height="80%">
 
