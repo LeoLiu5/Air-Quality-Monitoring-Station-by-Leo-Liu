@@ -68,7 +68,7 @@
 
 - The hardware components are connected to Arduino MKR through jumping wires.
 
-<img src="./img/circ.png"  width="90%" height="90%">
+<img src="./img/WechatIMG1.png"  width="90%" height="90%">
 
 <img src="./img/a0.jpeg"  width="90%" height="90%">
 
