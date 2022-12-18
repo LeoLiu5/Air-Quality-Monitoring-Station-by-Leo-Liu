@@ -11,6 +11,8 @@
 // #include <Wire.h>
 // PMS pms(Serial1);
 
+// Sensor variables are declared:
+
 Adafruit_PM25AQI aqi = Adafruit_PM25AQI();  //Setting up PMS5003 data
 Adafruit_SGP30 sgp;                         //Setting up SGP30 data
 
@@ -54,10 +56,10 @@ void setup() {
   // pmSerial.begin(9600);
   // There are 3 options for connectivity!
   // if (! aqi.begin_I2C()) {      // connect to the sensor over I2C
-  if (!aqi.begin_UART(&Serial1)) {  // connect to the sensor over hardware serial
-                                    // if (! aqi.begin_UART(&pmSerial)) { // connect to the sensor over software serial
-    Serial.println("Could not find PM 2.5 sensor!");
-    while (1) delay(10);
+  if (! aqi.begin_UART(&Serial1)) {  // connect to the sensor over hardware serial
+  // if (! aqi.begin_UART(&pmSerial)) { // connect to the sensor over software serial
+  Serial.println("Could not find PM 2.5 sensor!");
+  while (1) delay(10);
   }
 
   Serial.println("PM25 found!");

@@ -7,7 +7,7 @@
 #include <SoftwareSerial.h>
 #include <Wire.h>
 // we must use software serial...
-SoftwareSerial pmSerial(4, 2);
+SoftwareSerial pmSerial(4,2);
 Adafruit_SGP30 sgp;
 Adafruit_PM25AQI aqi = Adafruit_PM25AQI();
 //Constants
@@ -186,3 +186,19 @@ if (currentMillis - previousMillis > interval) {
   lcd.print(eCO2String);lcd.setCursor(13, 1);lcd.print("ppm");delay(10000);
   }
 }
+
+// #include <Wire.h>
+// #include "wiring_private.h"
+// // Create the new wire instance assigning it to pin 0 and 1
+// TwoWire myWire(&sercom3, 0, 1);   
+// void setup()
+// {
+
+//   myWire.begin(2);                // join i2c bus with address #2
+
+//   pinPeripheral(0, PIO_SERCOM);   //Assign SDA function to pin 0
+
+//   pinPeripheral(1, PIO_SERCOM);   //Assign SCL function to pin 1
+
+//   myWire.onRequest(requestEvent); // register event
+// }
